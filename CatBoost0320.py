@@ -139,7 +139,7 @@ with col1:
             # Laboratory Values
             血红蛋白浓度 = st.number_input(
                 "血红蛋白浓度 (g/L)", 
-                min_value=0.0, max_value=500.0, value=150.0, step=1, format="%.1f"
+                min_value=0.0, max_value=500.0, value=150.0, step=1.0, format="%.1f"
             )
                         
             submitted = st.form_submit_button("预测", use_container_width=True)
