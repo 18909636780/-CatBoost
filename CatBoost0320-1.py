@@ -120,12 +120,11 @@ if submitted:
         st.markdown(
             f"""
             <div class="prediction-box {risk_class}">
-                <h3 style='margin-top:0; font-size: 1.1rem; color: #333;'>评估结论</h3>
-                <p style="font-size:1.1rem; margin-bottom:8px;">
+                <p style="font-size:1.2rem; margin-top:0; margin-bottom:12px;">
                     衰弱患病概率: <span style="color:{risk_color}; font-weight:bold;">{prob_class1:.1%}</span>
                 </p>
-                <p style="font-size:1rem; margin-bottom:0;">
-                    风险等级分层: <span style="background-color:{risk_color}; color:white; padding:2px 8px; border-radius:4px; font-weight:bold;">{risk_text}</span>
+                <p style="font-size:1.1rem; margin-bottom:0;">
+                    风险等级分层: <span style="background-color:{risk_color}; color:white; padding:3px 10px; border-radius:4px; font-weight:bold;">{risk_text}</span>
                 </p>
             </div>
             """, 
