@@ -111,16 +111,21 @@ if submitted:
     with col2:
         # Prediction results
         risk_class = "high-risk" if predicted_class == 1 else "low-risk"
+        risk_text = "高风险" if predicted_class == 1 else "低风险"
+        risk_color = "#ff5252" if predicted_class == 1 else "#4caf50"
+        
         st.markdown(
             f"""
             <div class="prediction-box {risk_class}">
-                <h3 style='margin-top:0; font-size: 1.1rem;'>预测结果</h3>
-                <p style="font-size:1rem; font-weight:bold; margin-bottom:0;">
-                    Frailty Probability: <span style="color:{'#ff5252' if predicted_class == 1 else '#4caf50'}">{prob_class1:.1%}</span>
+                <h3 style='margin-top:0; font-size: 1.1rem; color: #333;'>评估结论</h3>
+                <p style="font-size:1.1rem; margin-bottom:8px;">
+                    衰弱患病概率: <span style="color:{risk_color}; font-weight:bold;">{prob_class1:.1%}</span>
                 </p>
-                <p style="font-size:0.9rem;">
-                    Risk Classification: <strong>{'High Risk' if predicted_class == 1 else 'Low Risk'}</strong>
-                    (Threshold: {OPTIMAL_THRESHOLD:.0%})
+                <p style="font-size:1rem; margin-bottom:0;">
+                    风险等级分层: <span style="background-color:{risk_color}; color:white; padding:2px 8px; border-radius:4px; font-weight:bold;">{risk_text}</span>
+                </p>
+                <p style="font-size:0.8rem; color:#666; margin-top:10px; border-top:1px dashed #ccc; padding-top:5px;">
+                    注：诊断阈值为 {OPTIMAL_THRESHOLD:.1%}（概率超过此值即判定为高风险）
                 </p>
             </div>
             """, 
