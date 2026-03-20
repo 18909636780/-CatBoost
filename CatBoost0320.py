@@ -34,7 +34,7 @@ scaler = joblib.load('scaler frailty1.pkl')
 
 # Feature names
 feature_names = [
-    "年龄", "用药数量", "每日食用蔬菜的量", "血红蛋白浓度",  "认知状态"
+    "年龄", "用药数量", "每日食用蔬菜的量", "血红蛋白浓度", "认知状态"
 ]
 
 # Custom CSS for compact layout
@@ -128,6 +128,11 @@ with col1:
         with st.form("input_form"):
             # Demographic Information
             年龄 = st.number_input("年龄", min_value=1, max_value=150, value=60)
+            认知状态 = st.selectbox(
+                "认知状态", 
+                options=list(认知状态_options.keys()), 
+                format_func=lambda x: 认知状态_options[x]
+            )
             用药数量 = st.number_input("用药数量", min_value=1, max_value=30, value=3)
             
             # Clinical Characteristics
