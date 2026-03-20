@@ -124,9 +124,9 @@ if submitted:
                 <p style="font-size:1rem; margin-bottom:0;">
                     风险等级分层: <span style="background-color:{risk_color}; color:white; padding:2px 8px; border-radius:4px; font-weight:bold;">{risk_text}</span>
                 </p>
-                <p style="font-size:0.8rem; color:#666; margin-top:10px; border-top:1px dashed #ccc; padding-top:5px;">
-                    注：诊断阈值为 {OPTIMAL_THRESHOLD:.1%}（概率超过此值即判定为高风险）
-                </p>
+               #<p style="font-size:0.8rem; color:#666; margin-top:10px; border-top:1px dashed #ccc; padding-top:5px;">
+                    #注：诊断阈值为 {OPTIMAL_THRESHOLD:.1%}（概率超过此值即判定为高风险）
+                #</p>
             </div>
             """, 
             unsafe_allow_html=True
