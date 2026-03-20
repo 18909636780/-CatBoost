@@ -1,5 +1,5 @@
 scikit-learn
-xgboost
+catboost
 joblib 
 streamlit 
 numpy 
