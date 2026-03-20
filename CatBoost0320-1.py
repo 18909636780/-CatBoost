@@ -37,30 +37,33 @@ feature_names_en = ["Age", "Medication Count", "Vegetable Intake", "Hemoglobin",
     3: '中度认知障碍',
 }
 
-# Custom CSS for compact layout
+# Custom CSS
 st.markdown("""
     <style>
+    /* 新增：大标题居中样式 */
+    .centered-title {
+        text-align: center;
+        color: #1f77b4;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        font-weight: bold;
+    }
     .main { background-color: #f8f9fa; }
-    .st-bw { background-color: white; }
-    .stNumberInput, .stSelectbox { padding-bottom: 4px; }
-    div[data-baseweb="input"] { margin-bottom: -1rem; }
-    .right-column { font-size: 0.9rem; }
-    .right-title { text-align: left; margin-top: 0; padding-top: 0; font-size: 1.3rem; }
-    .prediction-box { border-radius: 5px; padding: 12px; margin-bottom: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .high-risk { background-color: #ffdddd; border-left: 4px solid #ff5252; }
-    .low-risk { background-color: #ddffdd; border-left: 4px solid #4caf50; }
-    .section-header { font-size: 0.95rem; font-weight: bold; margin-bottom: 8px; }
+    /* ... 其余 CSS 保持不变 ... */
     </style>
     """, unsafe_allow_html=True)
 
-# Create two columns (40%, 60%)
+# 1. 关键位置：在创建列之前，先放置居中大标题
+st.markdown("<h1 class='centered-title'>社区慢病老年人衰弱风险计算器</h1>", unsafe_allow_html=True)
+
+# 2. 创建列容器 (现在 col2 里面不需要再放标题了)
 col1, col2 = st.columns([4, 6], gap="medium")
 
 # Right column content
 with col2:
     st.markdown("<div class='right-column'>", unsafe_allow_html=True)
-    st.markdown("<h1 class='right-title'>社区慢病老年人衰弱风险计算器</h1>", unsafe_allow_html=True)
-
+    # 这里删掉了原来的 st.markdown("<h1 class='right-title'>...</h1>")
+    
 # Left column content - input form
 with col1:
     with st.container():
