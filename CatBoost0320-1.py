@@ -164,8 +164,7 @@ if submitted:
             st.markdown("""
             <div style="font-size:0.8rem; color:#666; background-color:#f0f2f6; padding:10px; border-radius:5px;">
                 <strong>指标翻译对照:</strong><br>
-                Age: 年龄 | Medication Count: 用药数量 | Vegetable Intake: 蔬菜摄入量<br>
-                Hemoglobin: 血红蛋白浓度 | Cognitive Status: 认知状态
+                Age: 年龄 | Medication Count: 用药数量 | Vegetable Intake: 蔬菜摄入量 | Hemoglobin: 血红蛋白浓度 | Cognitive Status: 认知状态
             </div>
             """, unsafe_allow_html=True)
 
