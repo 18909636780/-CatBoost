@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 
 # Page configuration
 st.set_page_config(
-    page_title="社区慢病老年人衰弱风险计算器",
+    page_title="社区慢性病老年人衰弱风险计算器",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -76,7 +76,7 @@ with col1:
             )
             用药数量 = st.number_input("用药数量", min_value=1, max_value=30, value=3)
             每日食用蔬菜的量 = st.selectbox(
-                "每日食用蔬菜的量", 
+                "每日蔬菜摄入量", 
                 options=list(每日食用蔬菜的量_options.keys()), 
                 format_func=lambda x: 每日食用蔬菜的量_options[x]
             )
