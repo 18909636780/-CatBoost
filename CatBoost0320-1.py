@@ -54,7 +54,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # 1. 关键位置：在创建列之前，先放置居中大标题
-st.markdown("<h1 class='centered-title'>社区慢病老年人衰弱风险计算器</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='centered-title'>社区慢性病老年人衰弱风险计算器</h1>", unsafe_allow_html=True)
 
 # 2. 创建列容器 (现在 col2 里面不需要再放标题了)
 col1, col2 = st.columns([4, 6], gap="medium")
@@ -159,13 +159,22 @@ if submitted:
             st.caption("""
             **注：** 红色条柱表示该因素增加了衰弱风险，蓝色表示降低了风险。
             """)
-            
             # 对照表帮助用户理解英文标签
             st.markdown("""
             <div style="font-size:0.8rem; color:#666; background-color:#f0f2f6; padding:10px; border-radius:5px;">
                 <strong>指标翻译对照:</strong><br>
-                Age: 年龄 | Medication Count: 用药数量 | Vegetable Intake: 蔬菜摄入量 | Hemoglobin: 血红蛋白浓度 | Cognitive Status: 认知状态
+                Age: 年龄 | Medication Count: 用药数量 | Vegetable Intake: 蔬菜摄入量<br>
+                Hemoglobin: 血红蛋白浓度 | Cognitive Status: 认知状态
             </div>
             """, unsafe_allow_html=True)
 
-    st.markdown("</div>", unsafe_allow_html=True)
+            st.markdown("</div>", unsafe_allow_html=True)
+            # 对照表帮助用户理解英文标签
+            #st.markdown("""
+            #<div style="font-size:0.8rem; color:#666; background-color:#f0f2f6; padding:10px; border-radius:5px;">
+                #<strong>指标翻译对照:</strong><br>
+                #Age: 年龄 | Medication Count: 用药数量 | Vegetable Intake: 蔬菜摄入量 | Hemoglobin: 血红蛋白浓度 | Cognitive Status: 认知状态
+            #</div>
+            #""", unsafe_allow_html=True)
+
+    #st.markdown("</div>", unsafe_allow_html=True)
