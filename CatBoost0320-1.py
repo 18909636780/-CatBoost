@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 
 # Page configuration
 st.set_page_config(
-    page_title="社区慢性病老年人衰弱风险计算器",
+    page_title="社区慢病老年人衰弱风险计算器",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -160,16 +160,16 @@ if submitted:
             **注：** 红色条柱表示该因素增加了衰弱风险，蓝色表示降低了风险。
             """)
             # 对照表帮助用户理解英文标签
-            st.markdown("""
-            <div style="font-size:0.8rem; color:#666; background-color:#f0f2f6; padding:10px; border-radius:5px;">
-                <strong>指标翻译对照:</strong><br>
-                Age: 年龄 | Medication Count: 用药数量 | Vegetable Intake: 蔬菜摄入量<br>
-                Hemoglobin: 血红蛋白浓度 | Cognitive Status: 认知状态
-            </div>
-            """, unsafe_allow_html=True)
+            #st.markdown("""
+            #<div style="font-size:0.8rem; color:#666; background-color:#f0f2f6; padding:10px; border-radius:5px;">
+                #<strong>指标翻译对照:</strong><br>
+                #Age: 年龄 | Medication Count: 用药数量 | Vegetable Intake: 蔬菜摄入量<br>
+                #Hemoglobin: 血红蛋白浓度 | Cognitive Status: 认知状态
+            #</div>
+            #""", unsafe_allow_html=True)
 
-            st.markdown("</div>", unsafe_allow_html=True)
-            # 对照表帮助用户理解英文标签
+            #st.markdown("</div>", unsafe_allow_html=True)
+            #对照表帮助用户理解英文标签
             #st.markdown("""
             #<div style="font-size:0.8rem; color:#666; background-color:#f0f2f6; padding:10px; border-radius:5px;">
                 #<strong>指标翻译对照:</strong><br>
@@ -178,3 +178,12 @@ if submitted:
             #""", unsafe_allow_html=True)
 
     #st.markdown("</div>", unsafe_allow_html=True)
+            #对照表帮助用户理解英文标签
+            st.markdown("""
+            <div style="font-size:0.8rem; color:#666; background-color:#f0f2f6; padding:10px; border-radius:5px;">
+                <strong>指标翻译对照:</strong><br>
+                Age: 年龄 | Medication Count: 用药数量 | Vegetable Intake: 蔬菜摄入量 | Hemoglobin: 血红蛋白浓度 | Cognitive Status: 认知状态
+            </div>
+            """, unsafe_allow_html=True)
+
+            st.markdown("</div>", unsafe_allow_html=True)
